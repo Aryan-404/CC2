@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Registration Page</title>
+<style>
+
+body {
+font-family: Arial, sans-serif; margin: 0;
+padding: 0;
+background-color: #f0f0f0; display: flex;
+justify-content: center; align-items: center; height: 100vh;
+}
+
+.registration-container { background-color: white; padding: 20px;
+border-radius: 8px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+width: 100%;
+max-width: 400px;
+}
+h1 {
+text-align: center; font-size: 24px; margin-bottom: 20px;
+}
+form {
+display: flex;
+flex-direction: column; gap: 15px;
+}
+input[type="text"], input[type="email"], input[type="password"], input[type="checkbox"] {
+padding: 10px; font-size: 16px;
+border: 1px solid #ccc; border-radius: 4px; width: 100%;
+}
+
+input[type="checkbox"] { width: auto;
+margin-right: 10px;
+}
+
+button {
+background-color: #007BFF; color: white;
+padding: 12px; border: none; border-radius: 4px; cursor: pointer; font-size: 16px;
+}
+
+button:hover {
+background-color: #0056b3;
+}
+
+.signin-link {
+text-align: center; font-size: 14px;
+}
+.signin-link a { color: #007BFF;
+text-decoration: none;
+}
+
+.signin-link a:hover {
+text-decoration: underline;
+}
+</style>
+</head>
+<body>
+<div class="registration-container">
+<h1>Create an Account</h1>
+
+<form action="GetServletData2" method="Get">
+<input type="text" id="username" name="username" placeholder="Username" required>
+<input type="email" id="email" name="email" placeholder="Email" required>
+<input type="password" id="password" name="password" placeholder="Password" required>
+<input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm Password" required>
+<label>
+<input type="checkbox" name="terms" required> I agree to the terms and conditions
+</label>
+<button type="submit">Register</button>
+<p class="signin-link">Already have an account? <a href="#">Sign in</a></p>
+</form>
+</div>
+</body>
